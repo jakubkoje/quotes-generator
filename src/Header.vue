@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: "Header",
   props: ["number"]
 };
 </script>
