@@ -1,4 +1,4 @@
-#Quotes Generator
+# Quotes Generator
 
 A Quote generating app.
 
