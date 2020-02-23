@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Search from "./Search.vue";
-import Quotes from "./Quotes.vue";
-import Footer from "./Footer.vue";
+import Header from './components/Header.vue';
+import Search from './components/Search.vue';
+import Quotes from './components/Quotes.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components: {
     Header,
     Footer,
     Search,
-    Quotes
+    Quotes,
   },
   data() {
     return {
       quotes: [],
-      number: 0
+      number: 0,
     };
   },
   methods: {
@@ -33,19 +33,19 @@ export default {
           this.quotes = [...this.quotes, value];
           this.number++;
         } else {
-          alert("You cant have more than 10 quotes!");
+          alert('You cant have more than 10 quotes!');
         }
       } else {
         alert("You can't have the same quote!");
       }
     },
     removeQuote(value) {
-      this.quotes = this.quotes.filter(item => {
+      this.quotes = this.quotes.filter((item) => {
         return item !== value;
       });
       this.number--;
-    }
-  }
+    },
+  },
 };
 </script>
 
